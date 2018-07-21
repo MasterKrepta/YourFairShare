@@ -1,0 +1,62 @@
+/*  Universal Styles*/
+body{
+  background-color: #cbcbcb;
+}
+
+/* Navbar styes */
+.nav-link{
+  font-size: 1.5rem;
+
+}
+
+
+
+/*  jumbotron Styles*/
+
+.jumbotron{
+  border-radius: 0;
+  background-image: url("../images/jt-homepage.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.fact-box{
+  padding: 1rem;
+  background: rgba(63, 90, 236, 0.8);
+  border-radius: 25px;
+
+}
+
+.roomateGrid {
+  display: grid;
+  align-items: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+/* Card styles */
+.card{
+  align-items: center;
+  width: 300px;
+  padding: 1.2rem;
+}
+
+.profile-pic {
+  max-width: 100%;
+  height: auto;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
