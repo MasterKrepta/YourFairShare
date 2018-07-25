@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="styles/styles.css">
+
 
     <title>Add Roommate || Your Fair Share </title>
 
@@ -37,9 +41,9 @@
 
    </div>
     <div class="container">
-       <h1>Add Tennat</h1>
+       <h1>Add Roomate</h1>
        <hr/>
-       <form id="add-tennat">
+       <form id="add-roomate">
            <div class='form-group'>
                <label for='firstName'>First Name</label>
                <input type="text" id='firstname'>
@@ -49,15 +53,17 @@
                <input type="text" id='lastname'>
            </div>
            <div class="form-group">
-               <label><input type="checkbox">Has Pets</label>
-               <label><input type="checkbox">Has Kids</label>
+               <label><input type="checkbox" id='haspets'>Has Pets</label>
+               <label><input type="checkbox" id='haskids'>Has Kids</label>
+               <br>
+               <label for="profile-pic"><i class="fas fa-camera"></i> Profile Pic <input type="file" id="profilePic"></label>
            </div>
-           <button type="submit" class="btn btn-primary">Add To Household</button>
+           <button type="submit" id="submit-roommate"class="btn btn-primary">Add To Household</button>
        </form>
 
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="get-roommate.js"></script>
 </body>
 <footer class="page-footer font-small blue pt-4 mt-4">
     <!--Copyright-->

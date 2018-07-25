@@ -1,9 +1,11 @@
 var data = [
-  {"firstName":"Brenda", "lastName":"Doe", "percentage":0.25},
-  {"firstName":"Sarah", "lastName":"Teal", "percentage":0.25},
-  {"firstName":"Kevin", "lastName":"Jones", "percentage":0.25},
-  {"firstName":"Matt", "lastName":"Smith", "percentage":0.25},
+  {"firstName":"Brenda", "lastName":"Doe","hasPets": true, "hasKids": false, "percentage":0.25},
+  {"firstName":"Sarah", "lastName":"Teal","hasPets": true, "hasKids": false, "percentage":0.25},
+  {"firstName":"Kevin", "lastName":"Jones","hasPets": true, "hasKids": false, "percentage":0.25},
+  {"firstName":"Matt", "lastName":"Smith", "hasPets": true, "hasKids": false,"percentage":0.25},
 ]
+
+
 var cards = document.querySelectorAll('.card');
 
 window.onload = function() {
