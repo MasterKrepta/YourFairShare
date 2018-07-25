@@ -27,10 +27,9 @@ li{
   padding: 1rem;
   background: rgba(63, 90, 236, 0.8);
   border-radius: 25px;
-
 }
 
-.roomateGrid {
+#roommateGrid {
   display: grid;
   vertical-align: top;
   grid-gap: 10px;

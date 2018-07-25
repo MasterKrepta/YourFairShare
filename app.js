@@ -1,19 +1,46 @@
-var data = [
-  {"firstName":"Brenda", "lastName":"Doe","hasPets": true, "hasKids": false, "percentage":0.25},
-  {"firstName":"Sarah", "lastName":"Teal","hasPets": true, "hasKids": false, "percentage":0.25},
-  {"firstName":"Kevin", "lastName":"Jones","hasPets": true, "hasKids": false, "percentage":0.25},
-  {"firstName":"Matt", "lastName":"Smith", "hasPets": true, "hasKids": false,"percentage":0.25},
-]
+// const grid = document.getElementByID('roommateGrid');
+var grid = document.getElementById('roommateGrid');
+// const grid = document.querySelector('roommateGrid');
 
 
-var cards = document.querySelectorAll('.card');
+// Populate cards with data from localStorage
+window.onload = GetRoommates();
 
-window.onload = function() {
-  for (var i = 0; i < data.length; i++) {
-    getJokes(data[i], cards[i]);
-  }
-  // doSomethingElse();
-};
+
+
+function GetRoommates(){
+  let roommates = JSON.parse(localStorage.getItem('roommates'));
+let footer = document.querySelector('footer');
+  roommates.forEach(function(roommate){
+
+    let cardDiv = document.createElement('div');
+    cardDiv.className = ('card');
+    var fullname = `${roommate.firstName} ` + `${roommate.lastName}`;
+    var picurl = "images/roommates/" + roommate.picUrl;
+    // TODO: Set up a profile pic not found image
+    let divContent = `
+
+
+      <img class"profile-pic" src=${picurl} alt="">
+      <h4 class="name">${fullname}</h2>
+      <p class="joke">${getJokes(roommate, cardDiv)}</p>
+      <p class="percentage">Bill share: 25%</p>
+      `;
+    cardDiv.innerHTML = divContent;
+    grid.append(cardDiv);
+  });
+
+}
+
+// Load jokes into html
+// var cards = document.querySelectorAll('.card');
+
+// window.onload = function() {
+//   for (var i = 0; i < data.length; i++) {
+//     getJokes(data[i], cards[i]);
+//   }
+//   // doSomethingElse();
+// };
 function getJokes(roomate, card){
 
 const xhr = new XMLHttpRequest();
@@ -38,3 +65,28 @@ xhr.onload = function(){
 }
   xhr.send();
 }
+
+// function getJokes(roomate, card){
+//
+// const xhr = new XMLHttpRequest();
+//
+// xhr.open('GET', `http://api.icndb.com/jokes/random?firstName=${roomate.firstName}&amp&lastName=${roomate.lastName}`, true);
+//
+// xhr.onload = function(){
+//   if(this.status === 200){
+//     const response = JSON.parse(this.responseText);
+//
+//     let output = '';
+//
+//     if(response.type === 'success'){
+//       output += `<li>${response.value.joke}</li>`;
+//     } else {
+//       output += '<li>Something Went Wrong</li>'
+//     }
+//     var fullName = `${roomate.firstName} ${roomate.lastName}`;
+//     card.querySelector('.name').innerHTML = fullName;
+//     card.querySelector('.joke').innerHTML = output;
+//   }
+// }
+//   xhr.send();
+// }

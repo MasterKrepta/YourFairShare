@@ -1,3 +1,33 @@
-{
-  "firstName": "steve"
-}
+[{
+		"picUrl": "brenda.jpg",
+		"firstName": "Brenda",
+		"lastName": "Doe",
+		"hasPets": true,
+		"hasKids": false,
+		"percentage": 0.25
+	},
+	{
+		"picUrl": "sarah.jpg",
+		"firstName": "Sarah",
+		"lastName": "Teal",
+		"hasPets": true,
+		"hasKids": false,
+		"percentage": 0.25
+	},
+	{
+		"picUrl": "kevin.jpg",
+		"firstName": "Kevin",
+		"lastName": "Jones",
+		"hasPets": true,
+		"hasKids": false,
+		"percentage": 0.25
+	},
+	{
+		"picUrl": "matt.jpg",
+		"firstName": "Matt",
+		"lastName": "Smith",
+		"hasPets": true,
+		"hasKids": false,
+		"percentage": 0.25
+	}
+]
