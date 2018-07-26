@@ -10,7 +10,7 @@ window.onload = GetRoommates();
 
 function GetRoommates(){
   let roommates = JSON.parse(localStorage.getItem('roommates'));
-let footer = document.querySelector('footer');
+
   roommates.forEach(function(roommate){
 
     let cardDiv = document.createElement('div');

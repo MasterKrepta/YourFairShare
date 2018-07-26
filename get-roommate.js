@@ -18,7 +18,6 @@ xhr.send();
 function AddRoommate(e){
   let roommates;
 
-
   let roommate = {};
   roommate.picUrl = document.getElementById('firstname').value + ".jpg";
   // TODO: actually save user profile pic in directory
