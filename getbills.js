@@ -14,8 +14,9 @@ function GetBills(){
     cardDiv.className = ('card');
 
     let divContent = `
-      <h4 class="name">Bills Name: ${bill.name}</h4>
-      <p class="amount">Cost: ${bill.amount}</p>
+      <i class="far fa-money-bill-alt"></i>
+      <h4 class="name">${bill.name}</h4>
+      <p class="amount">$${bill.amount}</p>
       `;
     cardDiv.innerHTML = divContent;
     grid.append(cardDiv);

@@ -1,24 +1,10 @@
 
 document.getElementById("submit-roommate").addEventListener('click',  AddRoommate);
 
-
-var xhr = new XMLHttpRequest();
-var url = "userdata.json";
-xhr.open("GET", url, true);
-
-xhr.onreadystatechange = function(){
-
-  if(xhr.readyState == 4 && xhr.status == 200){
-    // console.log(JSON.parse(xhr.responseText));
-
-  }
-}
-xhr.send();
-
 function AddRoommate(e){
   let roommates;
-
   let roommate = {};
+
   roommate.picUrl = document.getElementById('firstname').value + ".jpg";
   // TODO: actually save user profile pic in directory
   roommate.firstName = document.getElementById('firstname').value;
@@ -43,4 +29,9 @@ function AddRoommate(e){
   //saveText( JSON.stringify(roommate), "userdata.json" );
 
   e.preventDefault();
+  document.getElementById('firstname').value = '';
+  document.getElementById('lastname').value = '';
+  document.getElementById('haspets').checked = false;
+  document.getElementById('haskids').checked = false;
+  
 }

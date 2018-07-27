@@ -2,7 +2,6 @@ document.getElementById("submit-bill").addEventListener('click',  AddBills);
 
 
 function AddBills(e){
-
   let bills;
   let bill = {};
 
@@ -16,7 +15,7 @@ function AddBills(e){
   } else{
     bills = JSON.parse(localStorage.getItem('bills'));
     bills.push(bill);
-    localStorage.setItem('bills', JSON.stringify(bill));
+    localStorage.setItem('bills', JSON.stringify(bills));
   }
 
   console.log(bill);

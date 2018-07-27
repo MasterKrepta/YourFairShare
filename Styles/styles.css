@@ -32,6 +32,16 @@ li{
 #roommateGrid {
   display: grid;
   vertical-align: top;
+  align-items: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+
+#billGrid {
+  display: grid;
+  vertical-align: top;
+  align-items: center;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 2rem;
@@ -50,6 +60,7 @@ li{
 
 .name{
   padding-top: 1rem;
+  text-transform: capitalize;
 }
 
 .joke{
@@ -65,9 +76,10 @@ padding-bottom: 2rem;
   bottom: 0;
 }
 
-
-
-  vertical-align: text-bottom;
+.fa-money-bill-alt{
+  font-size: 2rem;
+  color: green;
+}
 
 }
 
